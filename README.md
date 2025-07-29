@@ -2,6 +2,16 @@
 
 This repository contains a multi-agent framework designed to analyze and report on a given "Goal". The framework operates in a staged workflow, with different agents collaborating to produce a final report.
 
+## How to Run
+
+To initiate a run, provide a prompt starting with the key phrase `GOAL:`.
+
+**Example:**
+
+```
+GOAL: Analyze the impact of AI on the US stock market and provide a report.
+```
+
 ## Framework
 
 The basic concept is a "Goal" that will be analyzed and reported on in a "run". Each "run" will have its own working directory in the `runs` subdirectory.
@@ -39,16 +49,6 @@ The basic concept is a "Goal" that will be analyzed and reported on in a "run". 
     *   **Agents**: `JuniorReportWriter`, `SeniorReportWriter`.
     *   **Process**: The writers synthesize the entire `transcript.md` to construct the final, detailed `report.md`.
     *   **Output**: The final `report.md` file.
-
-## How to Run
-
-To initiate a run, provide a prompt starting with the key phrase `GOAL:`.
-
-**Example:**
-
-```
-GOAL: Analyze the impact of AI on the US stock market and provide a report.
-```
 
 ## Run Directory & Artifacts
 
