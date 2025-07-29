@@ -15,8 +15,8 @@ Each run will have a unique directory inside the `runs` directory. The directory
 
 Within this directory, the following files will be generated:
 
-*   `transcript.md`: A detailed log of all agent interactions, including every `WorkItem` description and result.
-*   `report.md`: The final, user-facing report generated after all work is complete.
+*   **`transcript.md`**: A detailed log of all agent interactions. This includes not just the results of each `WorkItem`, but also the detailed internal monologue, discussions, and step-by-step reasoning of the agents as they perform their tasks.
+*   **`report.md`**: The final, user-facing report. This is a comprehensive, boardroom-quality document that leads with a strong executive summary and includes detailed sections on methodology, macroeconomic analysis, sector deep dives, company profiles, risk analysis, and the final strategic recommendation.
 
 ## Staged Workflow
 
@@ -27,23 +27,23 @@ Within this directory, the following files will be generated:
 
 2.  **Stage 1: Strategic Direction (C-Suite Agents)**
     *   **Agents**: `ChiefExecutiveOfficer`, `ChiefOperatingOfficer`, etc.
-    *   **Process**: The C-Suite agents collaborate to analyze the `GOAL`, define the overall strategy, and establish success metrics.
+    *   **Process**: The C-Suite agents collaborate to analyze the `GOAL`, define the overall strategy, and establish success metrics. Their detailed discussion is logged.
     *   **Output**: A refined goal and a set of high-level strategic objectives.
 
 3.  **Stage 2: Tactical Breakdown (Project Management Agents)**
     *   **Agents**: `SeniorProjectManager`, `JuniorProjectManager`.
-    *   **Process**: The `SeniorProjectManager` breaks down the strategic objectives into large tasks. The `JuniorProjectManager` then decomposes those tasks into granular, actionable `WorkItem`s.
+    *   **Process**: The `SeniorProjectManager` breaks down the strategic objectives into major epics. The `JuniorProjectManager` then decomposes those epics into a granular, actionable list of `WorkItem`s with assigned agents.
     *   **Output**: A comprehensive list of `WorkItem`s.
 
 4.  **Stage 3: Execution (Worker Agents)**
-    *   **Agents**: Specialized workers (e.g., `Researcher`, `Coder`, `Writer`).
-    *   **Process**: Worker agents execute `WorkItem`s in a loop. They can complete tasks, use tools, or generate new sub-tasks. All actions are logged to `transcript.md`.
-    *   **Output**: A list of completed `WorkItem`s with their results.
+    *   **Agents**: Specialized workers (e.g., `Researcher`, `Analyst`).
+    *   **Process**: Worker agents execute `WorkItem`s in sequence. All actions, including the agent's internal reasoning and the data gathered, are logged to `transcript.md`.
+    *   **Output**: A list of completed `WorkItem`s with their detailed results.
 
-5.  **Stage 4: Final Reporting (Reporter Agent)**
-    *   **Agent**: `Reporter`.
-    *   **Process**: Synthesizes the `transcript.md` and all `WorkItem` results into a final, coherent report.
-    *   **Output**: The `report.md` file.
+5.  **Stage 4: Final Reporting (Report-Writer Agents)**
+    *   **Agents**: `JuniorReportWriter`, `SeniorReportWriter`.
+    *   **Process**: The writers synthesize the entire `transcript.md` to construct the final, detailed `report.md`.
+    *   **Output**: The final `report.md` file.
 
 ## Execution Trigger
 
