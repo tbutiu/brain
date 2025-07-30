@@ -40,10 +40,23 @@ Within this directory, the following files will be generated:
     *   **Process**: Worker agents execute `WorkItem`s in sequence. All actions, including the agent's internal reasoning and the data gathered, are logged to `transcript.md`.
     *   **Output**: A list of completed `WorkItem`s with their detailed results.
 
-5.  **Stage 4: Final Reporting (Report-Writer Agents)**
+5.  **Stage 4: Synthesis & Reporting (Report-Writer Agents)**
     *   **Agents**: `JuniorReportWriter`, `SeniorReportWriter`.
-    *   **Process**: The writers synthesize the entire `transcript.md` to construct the final, detailed `report.md`.
-    *   **Output**: The final `report.md` file.
+    *   **Process**: The writers synthesize the entire `transcript.md` to construct the initial draft of the detailed `report.md`.
+    *   **Output**: A draft `report.md` file ready for review.
+
+6.  **Stage 5: C-Suite Review & Feedback (Iterative Loop)**
+    *   **Agents**: `ChiefExecutiveOfficer`, `ChiefOperatingOfficer`, etc.
+    *   **Process**: The C-Suite agents review the generated `report.md` against the strategic objectives defined in Stage 1.
+        *   **If the report is approved:** The run is considered complete.
+        *   **If the report requires revision:** The C-Suite provides specific feedback, asking for additional information, deeper analysis, or clarification. This feedback serves as a new set of high-level objectives.
+    *   **Output**: Either final approval of the `report.md` or a list of feedback points and new requirements.
+
+7.  **Iteration Loop**
+    *   If the C-Suite provides feedback, the process loops back to **Stage 2: Tactical Breakdown**.
+    *   The Project Management agents will take the C-Suite's feedback and create new `WorkItem`s to address them.
+    *   The workflow then proceeds through **Stage 3 (Execution)** and **Stage 4 (Synthesis & Reporting)** again, generating a revised `report.md`.
+    *   This iterative process continues until the C-Suite gives their final approval in **Stage 5**.
 
 ## Execution Trigger
 
