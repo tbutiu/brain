@@ -1,4 +1,4 @@
-# Brain: A Multi-Agent Framework
+# Brain: A Multi-Agent Framework for Gemini CLI
 
 This repository contains a multi-agent framework designed to analyze and report on a given "Goal". The framework operates in a staged workflow, with different agents collaborating to produce a final report.
 
@@ -6,10 +6,15 @@ This project also serves as an interesting case study in self-orchestration. The
 
 ## How to Run
 
-To initiate a run, provide a prompt starting with the key phrase `GOAL:`.
+This framework is designed to be run interactively from within the Gemini CLI.
+
+1.  **Start Gemini CLI:** Open your terminal, navigate to this project's root directory, and start the Gemini CLI by running the command:
+    ```bash
+    gemini
+    ```
+2.  **Initiate a Goal:** Once the CLI is running, provide a prompt starting with the key phrase `GOAL:`.
 
 **Example:**
-
 ```
 GOAL: Analyze the impact of AI on the US stock market and provide a report.
 ```
