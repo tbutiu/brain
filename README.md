@@ -20,7 +20,7 @@ You can provide the agents with initial context by placing files in the top-leve
 
 1.  Add any relevant files (`.md`, `.txt`, `.pdf`, etc.) to the `/info` directory. This can be done at any time **before** starting a run.
 2.  When you initiate a new `GOAL:`, the framework will automatically detect these files, present you with a list, and ask you to select which ones the agents should read for that specific run.
-3.  The content of the selected files will be used as the starting context for the C-Suite agents. This allows for a library of reusable documents across different runs.
+3.  The content of the selected files will be used as the starting context for all agents involved in the run. This allows for a library of reusable documents across different runs.
 
 ## Framework
 

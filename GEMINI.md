@@ -28,7 +28,7 @@ Within this directory, the following files will be generated:
 2.  **Pre-Read Materials (Optional)**:
     *   **Process**: The framework checks for files in the top-level `/info/` directory.
     *   If files exist, the framework lists them and asks the user to select which ones the agents should review for the current run.
-    *   The content of the user-selected files is ingested and becomes the first entry in the `transcript.md`, providing initial context for all subsequent stages.
+    *   The content of the user-selected files is ingested and becomes the first entry in the `transcript.md`, providing a foundational context available to all agents throughout the run.
     *   **Output**: A "Pre-Read Materials" section at the top of the `transcript.md`.
 
 3.  **Stage 1: Strategic Direction (C-Suite Agents)**
