@@ -25,7 +25,13 @@ Within this directory, the following files will be generated:
     *   All Agent Personas from `agents.md` are loaded.
     *   A `Run` is initiated, and its unique directory is created.
 
-2.  **Stage 1: Strategic Direction (C-Suite Agents)**
+2.  **Pre-Read Materials (Optional)**:
+    *   **Process**: The framework checks for files in the top-level `/info/` directory.
+    *   If files exist, the framework lists them and asks the user to select which ones the agents should review for the current run.
+    *   The content of the user-selected files is ingested and becomes the first entry in the `transcript.md`, providing initial context for all subsequent stages.
+    *   **Output**: A "Pre-Read Materials" section at the top of the `transcript.md`.
+
+3.  **Stage 1: Strategic Direction (C-Suite Agents)**
     *   **Agents**: `ChiefExecutiveOfficer`, `ChiefOperatingOfficer`, etc.
     *   **Process**: The C-Suite agents collaborate to analyze the `GOAL`, define the overall strategy, and establish success metrics. Their detailed discussion is logged.
     *   **Output**: A refined goal and a set of high-level strategic objectives.

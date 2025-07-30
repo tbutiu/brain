@@ -2,6 +2,8 @@
 
 This repository contains a multi-agent framework designed to analyze and report on a given "Goal". The framework operates in a staged workflow, with different agents collaborating to produce a final report.
 
+This project also serves as an interesting case study in self-orchestration. The entire multi-agent workflow, including the different stages and agent handoffs, is coordinated by the Gemini model itself, interacting through the Gemini CLI. This demonstrates a novel approach to creating complex, autonomous behaviors from high-level directives. We encourage you to read the `GEMINI.md` file to see how a few simple prompt directives can be used to generate the sophisticated, multi-step process documented here.
+
 ## How to Run
 
 To initiate a run, provide a prompt starting with the key phrase `GOAL:`.
@@ -11,6 +13,14 @@ To initiate a run, provide a prompt starting with the key phrase `GOAL:`.
 ```
 GOAL: Analyze the impact of AI on the US stock market and provide a report.
 ```
+
+### Providing Pre-Read Materials (Optional)
+
+You can provide the agents with initial context by placing files in the top-level `info` directory.
+
+1.  Add any relevant files (`.md`, `.txt`, `.pdf`, etc.) to the `/info` directory. This can be done at any time **before** starting a run.
+2.  When you initiate a new `GOAL:`, the framework will automatically detect these files, present you with a list, and ask you to select which ones the agents should read for that specific run.
+3.  The content of the selected files will be used as the starting context for the C-Suite agents. This allows for a library of reusable documents across different runs.
 
 ## Framework
 
