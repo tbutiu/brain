@@ -1,1 +1,5 @@
 runs/
+
+# Ignore pre-read materials, but keep the directory and its README.
+info/*
+!info/README.md
